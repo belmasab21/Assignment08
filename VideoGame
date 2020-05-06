@@ -1,0 +1,33 @@
+public final class VideoGame implements Comparable<VideoGame> {
+    private final String title;
+    private final String creator;
+    private final int price;
+    private final Rating rating;
+    
+    public VideoGame(String title, String creator, int price, Rating rating) {
+     this.title = title;
+     this.creator = creator;
+     this.price = price;
+     this.rating = rating;     
+    }
+    public String getTitle() {
+     return title;   
+    }
+    public String getCreator() {
+     return creator;   
+    }
+    public int getPrice() {
+     return price;   
+    }
+    public Rating getRating() {
+     return rating;   
+    }
+    @Override
+    public int compareTo(VideoGame other) {
+     return price - other.getPrice();   
+    }
+    @Override
+    public String toString() {
+     return String.format("$%d - %s (by %s) [Rated %s]", price, title, creator, rating);   
+    }
+}
