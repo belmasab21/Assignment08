@@ -1,0 +1,10 @@
+import java.util.Comparator;
+public final class GameCreatorComparator implements Comparator<VideoGame> {
+ @Override
+ public int compare (VideoGame a1, VideoGame a2) {
+     String game1 = a1.getCreator();
+     String game2 = a2.getCreator();
+     
+     return game1.compareTo(game2);
+    }
+}
